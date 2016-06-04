@@ -143,6 +143,13 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
         return gtn_shortcuts_view;
     }
 
+    // onResume(): This function is called whenever the current fragment is resumed.
+    @Override
+    public void onResume() {
+        super.onResume();
+        googleApiClient.connect(); // Establishes a Google API client connection.
+    }
+
     // onPause(): This function is called whenever the current fragment is suspended.
     @Override
     public void onPause() {
@@ -157,6 +164,7 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        googleApiClient.disconnect(); // Disconnects the Google API client connection.
         ButterKnife.unbind(this); // Sets all injected views to null.
     }
 
@@ -170,8 +178,9 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
 
         // GOOGLE API CLIENT INITIALIZATION:
         googleApiClient = new GoogleApiClient.Builder(getContext())
-                .enableAutoManage(getActivity(), 0 /* clientId */, this)
                 .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(getActivity(), this)
                 .build();
     }
 

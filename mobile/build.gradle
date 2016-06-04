@@ -30,9 +30,9 @@ android {
         release {
             buildConfigField "boolean", "RELEASE", "true"
             minifyEnabled false
-            shrinkResources true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
-            zipAlignEnabled true
+            zipAlignEnabled false
             signingConfig signingConfigs.release
         }
     }

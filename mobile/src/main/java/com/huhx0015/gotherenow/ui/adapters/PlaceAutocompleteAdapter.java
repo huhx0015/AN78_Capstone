@@ -18,6 +18,7 @@ package com.huhx0015.gotherenow.ui.adapters;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.data.DataBufferUtils;
 import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.AutocompletePrediction;
@@ -216,9 +217,9 @@ public class PlaceAutocompleteAdapter extends ArrayAdapter<AutocompletePredictio
                 public ArrayList<AutocompletePrediction> processFinish(AutocompletePredictionBuffer predictionOutput) {
 
                     // Confirm that the query completed successfully, otherwise return null
-                    final com.google.android.gms.common.api.Status status = predictionOutput.getStatus();
+                    final Status status = predictionOutput.getStatus();
                     if (!status.isSuccess()) {
-                        Log.i("Error contacting API","Error contacting API");
+                        Log.i("Error contacting API", "Error contacting API");
                         Toast.makeText(getContext(), "Error contacting API: " + status.toString(),
                                 Toast.LENGTH_SHORT).show();
                         predictionOutput.release();

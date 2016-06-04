@@ -502,7 +502,9 @@ public class GTNMainActivity extends AppCompatActivity implements LocationListen
     private void setUpAd() {
 
         // Creates an ad request.
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("5E3A8FAEE969D3E3E25651FC8784D985")
+                .build();
         adView.loadAd(adRequest); // Starts loading the ad in the background.
 
         // Sets a listener for the advertising banner. If the advertising banner has been loaded,
