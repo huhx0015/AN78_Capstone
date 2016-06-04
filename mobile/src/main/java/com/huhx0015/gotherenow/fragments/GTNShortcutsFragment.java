@@ -278,6 +278,7 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
                 switch(event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         changeQuickNavButtonImage(true);
+                        quickNavButton.performClick();
                         return true;
                     case MotionEvent.ACTION_UP:
                         changeQuickNavButtonImage(false);
