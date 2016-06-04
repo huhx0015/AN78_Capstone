@@ -1,9 +1,11 @@
-Go There Now
-================
+AN78_Capstone
+=============
 
 DEVELOPER: Michael Yoon Huh
 
-DESCRIPTION: Go There Now is an Android application that manages favorite location shortcuts, with the ability to create customized homescreen shortcut that launches Google Maps in navigation mode. The shortcut bypasses many steps of having to manually set and start Google Navigation mode.
+# Description
+
+Android Nanodegree | Project 7-8: Capstone: Go There Now is an Android application that manages favorite location shortcuts, with the ability to create customized homescreen shortcut that launches Google Maps in navigation mode. The shortcut bypasses many steps of having to manually set and start Google Navigation mode.
 
 Go There Now was developed in part as the final "Capstone" project for the Android Nanodegree program. This project serves to demonstrate all skills learned throughout the program to design, plan, and build an Android application from scratch.
 
