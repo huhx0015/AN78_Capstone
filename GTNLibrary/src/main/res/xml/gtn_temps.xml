@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="TEMPORARY SETTINGS"
+        android:key="gtn_temps">
+        <CheckBoxPreference
+            android:key="gtn_orientation_change"
+            android:title="ORIENTATION CHANGE"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="gtn_current_name"
+            android:title="CURRENT SHORTCUT NAME"
+            android:defaultValue=""/>
+        <EditTextPreference
+            android:key="gtn_current_address"
+            android:title="CURRENT SHORTCUT ADDRESS"
+            android:defaultValue=""/>
+        <EditTextPreference
+            android:key="gtn_current_trans_mode"
+            android:title="CURRENT TRANSPORTATION MODE"
+            android:defaultValue="d"/>
+        <EditTextPreference
+            android:key="gtn_last_location"
+            android:title="LAST LOCATION"
+            android:defaultValue=""/>
+    </PreferenceCategory>
+</PreferenceScreen>

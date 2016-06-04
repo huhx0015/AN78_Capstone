@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--FLOATING ACTION BUTTON DIMENSIONS-->
+    <dimen name="floating_action_button_elevation">8dp</dimen>
+    <dimen name="floating_action_button_width">56dp</dimen>
+    <dimen name="floating_action_button_height">40dp</dimen>
+    <dimen name="floating_action_button_edge">16dp</dimen>
+
+    <!-- WIDGET DIMENSIONS -->
+    <dimen name="widget_width">250dp</dimen>
+    <dimen name="widget_height">250dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/gtn_settings_fragment_layout">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/gtn_settings_fragment_scrollview_container" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gtn_settings_fragment_command_container">
+
+            <TextView
+                android:id="@+id/gtn_settings_transportation_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gtn_default_transportation_text"
+                android:textColor="@color/gtn_teal_color"
+                android:typeface="sans"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                style="@style/GoogleNowCardStyle"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:id="@+id/gtn_settings_transportation_container"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gtn_settings_transportation_button_container"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gtn_settings_transportation_driving_button"
+                        android:contentDescription="@string/gtn_settings_transportation_driving_button_description"
+                        android:background="@android:color/transparent"
+                        android:padding="4dp"
+                        android:nextFocusUp="@+id/gtn_settings_transportation_walking_button"
+                        android:nextFocusForward="@+id/gtn_settings_transportation_transit_button"
+                        android:nextFocusDown="@+id/gtn_settings_transportation_transit_button"
+                        android:nextFocusRight="@+id/gtn_settings_transportation_transit_button"
+                        android:nextFocusLeft="@+id/gtn_settings_transportation_walking_button"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gtn_settings_transportation_transit_button"
+                        android:contentDescription="@string/gtn_settings_transportation_transit_button_description"
+                        android:background="@android:color/transparent"
+                        android:padding="4dp"
+                        android:nextFocusUp="@+id/gtn_settings_transportation_driving_button"
+                        android:nextFocusForward="@+id/gtn_settings_transportation_biking_button"
+                        android:nextFocusDown="@+id/gtn_settings_transportation_biking_button"
+                        android:nextFocusRight="@+id/gtn_settings_transportation_biking_button"
+                        android:nextFocusLeft="@+id/gtn_settings_transportation_driving_button"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gtn_settings_transportation_biking_button"
+                        android:contentDescription="@string/gtn_settings_transportation_biking_button_description"
+                        android:background="@android:color/transparent"
+                        android:padding="4dp"
+                        android:nextFocusUp="@+id/gtn_settings_transportation_transit_button"
+                        android:nextFocusForward="@+id/gtn_settings_transportation_walking_button"
+                        android:nextFocusDown="@+id/gtn_settings_transportation_walking_button"
+                        android:nextFocusRight="@+id/gtn_settings_transportation_walking_button"
+                        android:nextFocusLeft="@+id/gtn_settings_transportation_transit_button"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gtn_settings_transportation_walking_button"
+                        android:contentDescription="@string/gtn_settings_transportation_walking_button_description"
+                        android:background="@android:color/transparent"
+                        android:padding="4dp"
+                        android:nextFocusUp="@+id/gtn_settings_transportation_biking_button"
+                        android:nextFocusForward="@+id/gtn_settings_transportation_driving_button"
+                        android:nextFocusDown="@+id/gtn_settings_transportation_driving_button"
+                        android:nextFocusRight="@+id/gtn_settings_transportation_driving_button"
+                        android:nextFocusLeft="@+id/gtn_settings_transportation_biking_button"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="SETTINGS"
+        android:key="gtn_options">
+        <ListPreference
+            android:key="gtn_language"
+            android:summary="English"
+            android:title="Language"
+            android:entries="@array/gtn_languages_list"
+            android:entryValues="@array/gtn_languages_list_values"
+            android:defaultValue="English" />
+        <CheckBoxPreference
+            android:key="gtn_initial_launch_a"
+            android:title="INITIAL LAUNCH"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:key="gtn_last_location"
+            android:title="LAST LOCATION"
+            android:defaultValue=""/>
+        <EditTextPreference
+            android:key="gtn_trans_mode"
+            android:title="TRANSPORTATION MODE"
+            android:defaultValue="d"/>
+        <CheckBoxPreference
+            android:key="gtn_wear_sync"
+            android:title="ANDROID WEAR SYNCHRONIZATION"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

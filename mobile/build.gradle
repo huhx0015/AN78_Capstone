@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.huhx0015.gotherenow"
+        minSdkVersion 11
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+
+        release {
+            storeFile file('AN78_Capstone.jks')
+            storePassword "nanodegree"
+            keyAlias "huhx0015"
+            keyPassword "nanodegree"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "RELEASE", "false"
+        }
+
+        release {
+            buildConfigField "boolean", "RELEASE", "true"
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+
+    // INTEGRATED LIBRARIES:
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':GTNLibrary')
+
+    // ANDROID SUPPORT LIBRARIES:
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+
+    // GOOGLE PLAY SERVICE LIBRARIES:
+    compile 'com.google.android.gms:play-services-base:9.0.1'
+    compile 'com.google.android.gms:play-services-ads:9.0.1'
+    compile 'com.google.android.gms:play-services-location:9.0.1'
+
+    // THIRD-PARTY LIBRARIES:
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+}

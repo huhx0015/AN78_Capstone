@@ -1,0 +1,52 @@
+<resources>
+
+    <!--Application Strings-->
+    <string name="app_name">Go There Now</string>
+
+    <!--ENGLISH-->
+    <string name="english">English</string>
+    <string name="add_shortcut_text">Add New Shortcut</string>
+    <string name="modify_shortcut_text">Modify Shortcut</string>
+    <string name="shortcut_text">Shortcut Name</string>
+    <string name="address_text">Address</string>
+    <string name="navigation_text">Start Navigation</string>
+    <string name="save_location_text">Save Location</string>
+    <string name="create_shortcut_text">Create Shortcut</string>
+    <string name="query_location_text">Query Current Location</string>
+    <string name="delete_location_text">Delete Location</string>
+
+    <!--GTNSettingsFragment-->
+    <string name="settings_text">Settings</string>
+    <string name="language_options_text">Language Settings</string>
+    <string name="language_title_text">Language</string>
+    <string name="sync_title_text">Android Wear Synchronization</string>
+    <string name="sync_options_text">Synchronization Settings</string>
+    <string name="sync_on_text">On</string>
+    <string name="sync_off_text">Off</string>
+    <string name="transportation_title_text">Default Transportation</string>
+    <string name="cancel_text">CANCEL</string>
+
+    <!--GTNShortcutsFragment-->
+    <string name="location_shortcut_text">Location Shortcuts</string>
+    <string name="quick_navigation_text">Quick Navigation</string>
+    <string name="quick_navigation_hint_text">Type a location...</string>
+
+    <!--GTNVoiceIntent-->
+    <string name="voice_command_header_text">State your destination...</string>
+
+    <!--GTNCardActivity-->
+    <string name="wear_instruction_text">Your navigation shortcuts will show up here.\n\nTap to create your shortcuts now!</string>
+    <string name="voice_instruction_text">Tap to state your destination!</string>
+
+    <!--Miscellaneous-->
+    <string name="google_maps_error_text">GOOGLE MAPS is not installed.\nGO THERE NOW requires GOOGLE MAPS.</string>
+    <string name="shortcut_name_error_text">Please input a shortcut name.</string>
+    <string name="address_error_text">Please input an address.</string>
+    <string name="adding_shortcut_text">New shortcut added to the homescreen:\n</string>
+    <string name="location_found_text">Closest Address to Your Position</string>
+    <string name="query_error_text">Cannot determine your current position.\nPlease make sure that your Location settings have been enabled.</string>
+    <string name="launch_navigation_text">Launching Navigation Mode:</string>
+    <string name="saving_location_text">Location saved:\n</string>
+    <string name="deleting_location_text">Location deleted:\n</string>
+
+</resources>

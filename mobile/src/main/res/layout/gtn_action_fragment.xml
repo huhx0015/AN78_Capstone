@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:id="@+id/gtn_action_fragment_layout">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gtn_action_fragment_header"
+        android:background="@color/gtn_toolbar_light_color"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/gtn_shortcut_input"
+            android:textSize="24sp"
+            android:typeface="sans"
+            android:textColorLink="@color/material_blue_grey_800"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            android:hint="@string/gtn_action_fragment_shortcut_name_hint"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/gtn_edit_text_color"
+            android:nextFocusForward="@+id/gtn_address_input"
+            android:nextFocusUp="@+id/delete_button"
+            android:nextFocusDown="@+id/gtn_address_input"
+            android:nextFocusRight="@+id/gtn_address_input"
+            android:nextFocusLeft="@+id/delete_button"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gtn_address_input"
+            android:textSize="20sp"
+            android:typeface="sans"
+            android:textColorLink="@color/material_blue_grey_800"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            android:hint="@string/gtn_action_fragment_shortcut_address_hint"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:textColorHint="@color/gtn_edit_text_color"
+            android:nextFocusForward="@+id/gtn_action_type_driving_button"
+            android:nextFocusUp="@+id/gtn_shortcut_input"
+            android:nextFocusDown="@+id/gtn_action_type_driving_button"
+            android:nextFocusRight="@+id/gtn_action_type_driving_button"
+            android:nextFocusLeft="@+id/gtn_shortcut_input"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gtn_edit_text_color"
+        android:id="@+id/gtn_action_type_header">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/gtn_toolbar_drop_shadow"
+            android:id="@+id/gtn_action_container_drop_shadow" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gtn_action_type_button_container"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtn_action_type_driving_button"
+                android:contentDescription="@string/gtn_action_type_driving_button_description"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:nextFocusForward="@+id/gtn_action_type_transit_button"
+                android:nextFocusUp="@+id/gtn_address_input"
+                android:nextFocusDown="@+id/navigation_button"
+                android:nextFocusRight="@+id/gtn_action_type_transit_button"
+                android:nextFocusLeft="@+id/gtn_address_input"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtn_action_type_transit_button"
+                android:contentDescription="@string/gtn_action_type_transit_button_description"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:nextFocusForward="@+id/gtn_action_type_biking_button"
+                android:nextFocusUp="@+id/gtn_address_input"
+                android:nextFocusDown="@+id/navigation_button"
+                android:nextFocusRight="@+id/gtn_action_type_biking_button"
+                android:nextFocusLeft="@+id/gtn_action_type_driving_button"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtn_action_type_biking_button"
+                android:contentDescription="@string/gtn_action_type_biking_button_description"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:nextFocusForward="@+id/gtn_action_type_walking_button"
+                android:nextFocusUp="@+id/gtn_address_input"
+                android:nextFocusDown="@+id/navigation_button"
+                android:nextFocusRight="@+id/gtn_action_type_walking_button"
+                android:nextFocusLeft="@+id/gtn_action_type_transit_button"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtn_action_type_walking_button"
+                android:contentDescription="@string/gtn_action_type_walking_button_description"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:nextFocusForward="@+id/navigation_button"
+                android:nextFocusUp="@+id/gtn_address_input"
+                android:nextFocusDown="@+id/navigation_button"
+                android:nextFocusRight="@+id/navigation_button"
+                android:nextFocusLeft="@+id/gtn_action_type_biking_button"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/gtn_toolbar_drop_shadow"
+        android:id="@+id/gtn_type_container_drop_shadow" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/gtn_action_fragment_command_container"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/gtn_action_fragment_command_scrollview_container" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtn_action_fragment_command_subcontainer"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:id="@+id/gtn_navigation_container">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/GoogleNowCardStyle"
+                        android:text="@string/gtn_start_navigation_button"
+                        android:id="@+id/navigation_button"
+                        android:textColor="@color/gtn_google_now_color"
+                        android:clickable="true"
+                        android:typeface="sans"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:nextFocusForward="@+id/create_shortcut_button"
+                        android:nextFocusUp="@+id/gtn_action_type_driving_button"
+                        android:nextFocusDown="@+id/create_shortcut_button"
+                        android:nextFocusRight="@+id/create_shortcut_button"
+                        android:nextFocusLeft="@+id/gtn_action_type_driving_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gtn_create_shortcut_container"
+                    android:layout_gravity="center_horizontal" >
+
+                    <Button
+                        style="@style/GoogleNowCardStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gtn_create_homescreen_shortcut_button"
+                        android:id="@+id/create_shortcut_button"
+                        android:textColor="@color/gtn_google_now_color"
+                        android:clickable="true"
+                        android:typeface="sans"
+                        android:gravity="center_vertical|start"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:nextFocusForward="@+id/save_location_button"
+                        android:nextFocusUp="@+id/navigation_button"
+                        android:nextFocusDown="@+id/save_location_button"
+                        android:nextFocusRight="@+id/save_location_button"
+                        android:nextFocusLeft="@+id/navigation_button"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gtn_save_container"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gtn_save_location_button"
+                        android:id="@+id/save_location_button"
+                        android:textColor="@color/gtn_google_now_color"
+                        android:clickable="true"
+                        android:typeface="sans"
+                        android:gravity="center_vertical|start"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        style="@style/GoogleNowCardStyle"
+                        android:nextFocusForward="@+id/delete_button"
+                        android:nextFocusUp="@+id/create_shortcut_button"
+                        android:nextFocusDown="@+id/delete_button"
+                        android:nextFocusRight="@+id/delete_button"
+                        android:nextFocusLeft="@+id/create_shortcut_button"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gtn_delete_container"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        style="@style/GoogleNowCardStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gtn_delete_location_button"
+                        android:id="@+id/delete_button"
+                        android:textColor="@color/gtn_google_now_color"
+                        android:clickable="true"
+                        android:gravity="center_vertical|start"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:typeface="sans"
+                        android:nextFocusForward="@+id/gtn_shortcut_input"
+                        android:nextFocusUp="@+id/save_location_button"
+                        android:nextFocusDown="@+id/gtn_shortcut_input"
+                        android:nextFocusRight="@+id/gtn_shortcut_input"
+                        android:nextFocusLeft="@+id/save_location_button"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

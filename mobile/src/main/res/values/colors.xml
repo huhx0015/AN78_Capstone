@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gtn_address_color">#6F6F6F</color>
+    <color name="gtn_edit_text_color">#98baf0</color>
+    <color name="gtn_google_now_color">#0099cc</color>
+    <color name="gtn_toolbar_dark_color">#274ebc</color>
+    <color name="gtn_toolbar_light_color">#3174e1</color>
+    <color name="gtn_golden_yellow_color">#fcbf14</color>
+    <color name="gtn_orange_color">#ff6c00</color>
+    <color name="gtn_green_color">#22a301</color>
+    <color name="gtn_teal_color">#009688</color>
+</resources>

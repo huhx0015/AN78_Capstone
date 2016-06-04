@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/gtn_shortcuts_widget_list_item_layout"
+    android:gravity="center_vertical"
+    android:baselineAligned="false"
+    android:padding="12dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/gtn_shortcut_widget_image"
+        android:background="@android:color/transparent"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/gtn_shortcut_image_description"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/gtn_shortcut_widget_view_text_container"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/gtn_shortcut_widget_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gtn_google_now_color"
+            android:typeface="sans"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/gtn_shortcut_widget_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:typeface="sans"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</LinearLayout>

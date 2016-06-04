@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/gtn_shortcuts_fragment_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/gtn_shortcuts_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gtn_quick_navigation_text"
+            android:id="@+id/gtn_quick_navigation_text"
+            android:textColor="@color/gtn_teal_color"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:paddingStart="14dp"
+            android:paddingLeft="14dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gtn_quick_nav_container"
+            android:gravity="center_horizontal"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                style="@style/GoogleNowCardStyle"
+                android:layout_weight="1"
+                android:id="@+id/gtn_quick_nav_input_container">
+
+                <AutoCompleteTextView
+                    android:id="@+id/gtn_quick_nav_input"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:padding="5dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/gtn_edit_text_color"
+                    android:background="@android:color/white"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:inputType="textPostalAddress"
+                    android:nextFocusForward="@+id/gtn_quick_nav_button"
+                    android:nextFocusUp="@+id/gtn_action_button"
+                    android:nextFocusDown="@+id/gtn_shortcuts_list"
+                    android:nextFocusRight="@+id/gtn_quick_nav_button"
+                    android:nextFocusLeft="@+id/gtn_quick_nav_button"/>
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/gtn_voice_input_button"
+                    android:contentDescription="@string/gtn_voice_input_button_description"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:scaleType="centerCrop"
+                    android:nextFocusForward="@+id/gtn_quick_nav_button"
+                    android:nextFocusUp="@+id/gtn_shortcuts_list"
+                    android:nextFocusDown="@+id/gtn_shortcuts_list"
+                    android:nextFocusRight="@+id/gtn_quick_nav_button"
+                    android:nextFocusLeft="@+id/gtn_quick_nav_input"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:id="@+id/gtn_quick_nav_spacer" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtn_quick_nav_button"
+                android:contentDescription="@string/gtn_quick_nav_button_description"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_gravity="center"
+                android:nextFocusForward="@+id/gtn_shortcuts_list"
+                android:nextFocusUp="@+id/gtn_shortcuts_list"
+                android:nextFocusDown="@+id/gtn_shortcuts_list"
+                android:nextFocusRight="@+id/gtn_quick_nav_input"
+                android:nextFocusLeft="@+id/gtn_quick_nav_input"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gtn_location_shortcuts_text"
+            android:id="@+id/gtn_location_shortcuts_text"
+            android:textColor="@color/gtn_teal_color"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:paddingStart="14dp"
+            android:paddingLeft="14dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gtn_shortcuts_list_container">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/gtn_shortcuts_list"
+                android:descendantFocusability="afterDescendants"
+                android:nextFocusForward="@+id/gtn_action_button"
+                android:nextFocusUp="@+id/gtn_quick_nav_input"
+                android:nextFocusDown="@+id/gtn_action_button"
+                android:nextFocusRight="@+id/gtn_quick_nav_input"
+                android:nextFocusLeft="@+id/gtn_shortcuts_list"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gtn_no_location_shortcuts_text"
+                android:id="@+id/gtn_no_shortcuts_text"
+                android:layout_gravity="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/gtn_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/gtn_fab_icon"
+        android:scaleType="centerInside"
+        android:nextFocusForward="@+id/gtn_quick_nav_input"
+        android:nextFocusUp="@+id/gtn_shortcuts_list"
+        android:nextFocusDown="@+id/gtn_quick_nav_input"
+        android:nextFocusRight="@+id/gtn_quick_nav_input"
+        android:nextFocusLeft="@+id/gtn_shortcuts_list"
+        fab:fab_colorNormal="@color/gtn_toolbar_dark_color"
+        fab:fab_colorPressed="@color/gtn_toolbar_light_color"
+        fab:fab_colorRipple="@color/gtn_toolbar_light_color"
+        fab:fab_shadow="true" />
+
+</android.support.design.widget.CoordinatorLayout>

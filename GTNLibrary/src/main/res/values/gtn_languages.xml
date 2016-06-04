@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gtn_languages_list">
+        <item name="English">English</item>
+        <item name="Chinese_Simplified">中国语文</item>
+        <item name="Chinese_Traditional">中國語文</item>
+        <item name="French">Français</item>
+        <item name="German">Deutsch</item>
+        <item name="Hindi">हिंदी</item>
+        <item name="Italian">Italiano</item>
+        <item name="Japanese">日本語</item>
+        <item name="Korean">한국어</item>
+        <item name="Portuguese">Português</item>
+        <item name="Russian">Русский</item>
+        <item name="Spanish">Español</item>
+        <item name="Vietnamese">Tiếng Việt</item>
+    </string-array>
+    <string-array name="gtn_languages_list_values">
+        <item name="English">English</item>
+        <item name="Chinese_Simplified">Chinese_Simplified</item>
+        <item name="Chinese_Traditional">Chinese_Traditional</item>
+        <item name="French">French</item>
+        <item name="German">German</item>
+        <item name="Hindi">Hindi</item>
+        <item name="Italian">Italian</item>
+        <item name="Japanese">Japanese</item>
+        <item name="Korean">Korean</item>
+        <item name="Portuguese">Portuguese</item>
+        <item name="Russian">Russian</item>
+        <item name="Spanish">Spanish</item>
+        <item name="Vietnamese">Vietnamese</item>
+    </string-array>
+</resources>

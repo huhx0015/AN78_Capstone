@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Application Strings-->
+    <string name="app_name">Go There Now</string>
+    <string name="action_settings">Settings</string>
+
+    <!--TextView Strings-->
+    <string name="gtn_no_location_shortcuts_text">No location shortcuts.</string>
+    <string name="gtn_quick_navigation_text">Quick Navigation</string>
+    <string name="gtn_location_shortcuts_text">Location Shortcuts</string>
+    <string name="gtn_default_transportation_text">Default Transportation</string>
+
+    <!--Button Strings-->
+    <string name="gtn_start_navigation_button">Start Navigation</string>
+    <string name="gtn_create_homescreen_shortcut_button">Create Homescreen Shortcut</string>
+    <string name="gtn_save_location_button">Save Location</string>
+    <string name="gtn_delete_location_button">Delete Location</string>
+
+    <!--Hint Strings-->
+    <string name="gtn_action_fragment_shortcut_name_hint">Shortcut Name</string>
+    <string name="gtn_action_fragment_shortcut_address_hint">Address</string>
+
+    <!--Content Description Strings-->
+    <string name="gtn_shortcut_image_description">Shortcut Type Icon</string>
+    <string name="gtn_voice_input_button_description">Voice Input Button</string>
+    <string name="gtn_edit_button_description">Shortcut Edit Button</string>
+    <string name="gtn_action_type_driving_button_description">Driving Type Button</string>
+    <string name="gtn_action_type_transit_button_description">Transit Type Button</string>
+    <string name="gtn_action_type_biking_button_description">Biking Type Button</string>
+    <string name="gtn_action_type_walking_button_description">Walking Type Button</string>
+    <string name="gtn_quick_nav_button_description">Quick Navigation Button</string>
+    <string name="gtn_settings_transportation_driving_button_description">Driving Type Button</string>
+    <string name="gtn_settings_transportation_transit_button_description">Transit Type Button</string>
+    <string name="gtn_settings_transportation_biking_button_description">Biking Type Button</string>
+    <string name="gtn_settings_transportation_walking_button_description">Walking Type Button</string>
+    <string name="gtn_shortcuts_widget_header_icon_description">GO THERE NOW Icon</string>
+    <string name="gtn_shortcuts_widget_transportation_type_icon">Transportation Type</string>
+</resources>
