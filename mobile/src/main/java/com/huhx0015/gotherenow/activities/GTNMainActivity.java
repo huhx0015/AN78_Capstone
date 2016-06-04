@@ -123,7 +123,6 @@ public class GTNMainActivity extends AppCompatActivity implements LocationListen
         // PREFERENCES: Retrieves any preferences that may have been changed in options and applies them accordingly.
         // Sets the default preferences values if the user is running application for the first time.
         GTNPreference.setDefaultPreferences(GTN_OPTIONS, false, this);
-        SharedPreferences GTN_prefs = GTNPreference.initializePreferences(GTN_OPTIONS, this);
 
         // Resets the temporary preference values to default values.
         GTNPreference.setDefaultPreferences(GTN_TEMPS, true, this);

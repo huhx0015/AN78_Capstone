@@ -1,6 +1,11 @@
 package com.huhx0015.gotherenow.ui.language;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.Configuration;
+import android.os.Build;
+import android.view.View;
+
 import com.huhx0015.gotherenow.library.R;
 import java.util.Locale;
 
@@ -190,5 +195,16 @@ public class GTNLanguage {
         language = context.getResources().getString(R.string.english);
 
         return language;
+    }
+
+    // isRTL(): Determines if the device is in RTL (Right-To-Left) mode.
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    public static boolean isRTL(Context context) {
+        Configuration config = context.getResources().getConfiguration();
+        if (config.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

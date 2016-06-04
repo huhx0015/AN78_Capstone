@@ -14,6 +14,8 @@ import android.support.v4.content.Loader;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.inputmethod.InputMethodManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,6 +76,7 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
     public GoogleApiClient googleApiClient;
 
     // LANGUAGE VARIABLES
+    private boolean isRTL = false; // Used to determine if device is in RTL mode.
     private GTNLanguage languageSettings; // Stores the language String values used by the layout.
 
     // LIST VARIABLES
@@ -189,6 +192,8 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
     // setUpLayout(): Sets up the layout for the fragment.
     private void setUpLayout() {
 
+        isRTL = GTNLanguage.isRTL(currentActivity); // Determines if device is in RTL mode.
+
         setUpButtons(); // Sets up the button listeners for the fragment.
         setUpLanguage(); // Applies the current language attributes onto the TextView objects.
         setUpSearch(null); // Sets up the AutoCompleteTextView input field.
@@ -200,28 +205,11 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
 
     // setUpButtons(): Sets up the button images and listeners for the fragment.
     private void setUpButtons() {
-
-        int quickNaviResource = R.drawable.gtn_nav_icon; // References the navigation icon.
         int voiceInputResource = R.drawable.gtn_mic_icon; // References the voice icon.
-        int buttonSize = GTNImages.densityToPixels(64, currentActivity); // Sets the size of ImageButtons.
         int micSize = GTNImages.densityToPixels(32, currentActivity); // Sets the size of the mic button.
 
-        // Sets up the rounded shape attributes for the voice input and quick navigation ImageButton
-        // object.
-        Transformation transformation = new RoundedTransformationBuilder()
-                .borderColor(Color.LTGRAY)
-                .borderWidthDp(1)
-                .cornerRadiusDp(90)
-                .oval(false)
-                .build();
-
         // Loads the navigation icon era image into the quick navigation ImageButton object.
-        Picasso.with(currentActivity)
-                .load(quickNaviResource)
-                .resize(buttonSize, buttonSize)
-                .centerCrop()
-                .transform(transformation)
-                .into(quickNavButton);
+        changeQuickNavButtonImage(false);
 
         // Checks to see if the device has voice recognition capabilities. If it has at least one
         // such service, the voice input button is shown and is setup.
@@ -271,6 +259,34 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
             }
         });
 
+        // QUICK NAVIGATION BUTTON: Focus listener.
+        quickNavButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    changeQuickNavButtonImage(true);
+                } else {
+                    changeQuickNavButtonImage(false);
+                }
+            }
+        });
+
+        // QUICK NAVIGATION BUTTON: Touch listener.
+        quickNavButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        changeQuickNavButtonImage(true);
+                        return true;
+                    case MotionEvent.ACTION_UP:
+                        changeQuickNavButtonImage(false);
+                        return true;
+                }
+                return false;
+            }
+        });
+
         // VOICE INPUT BUTTON: Click listener.
         voiceInputButton.setOnClickListener(new View.OnClickListener() {
 
@@ -294,6 +310,7 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
     // setUpLanguage(): Applies the current language settings to the TextView objects in the layout.
     private void setUpLanguage() {
         locationShortcutsText.setText(languageSettings.getLocationShortcutText());
+        quickNavAddress.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
         quickNavAddress.setHint(languageSettings.getQuickNavigationHintText());
         quickNavText.setText(languageSettings.getQuickNavigationText());
     }
@@ -365,6 +382,41 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
         catch (NullPointerException e) {
             Log.d(LOG_TAG, "ERROR: Null pointer exception was encountered while retrieving the shortcut input.");
             return null;
+        }
+    }
+
+    // changeQuickNavButtonImage(): Changes the quick navigation button image.
+    private void changeQuickNavButtonImage(boolean isSelected) {
+
+        int buttonSize = GTNImages.densityToPixels(64, currentActivity); // Sets the size of ImageButtons.
+
+        // Sets up the rounded shape attributes for the voice input and quick navigation ImageButton
+        // object.
+        Transformation transformation = new RoundedTransformationBuilder()
+                .borderColor(Color.LTGRAY)
+                .borderWidthDp(1)
+                .cornerRadiusDp(90)
+                .oval(false)
+                .build();
+
+        // SELECTED:
+        if (isSelected) {
+            Picasso.with(currentActivity)
+                    .load(R.drawable.gtn_nav_icon_focused)
+                    .resize(buttonSize, buttonSize)
+                    .centerCrop()
+                    .transform(transformation)
+                    .into(quickNavButton);
+        }
+
+        // NON-SELECTED:
+        else {
+            Picasso.with(currentActivity)
+                    .load(R.drawable.gtn_nav_icon)
+                    .resize(buttonSize, buttonSize)
+                    .centerCrop()
+                    .transform(transformation)
+                    .into(quickNavButton);
         }
     }
 

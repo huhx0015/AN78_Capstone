@@ -63,7 +63,10 @@
                     android:nextFocusUp="@+id/gtn_action_button"
                     android:nextFocusDown="@+id/gtn_shortcuts_list"
                     android:nextFocusRight="@+id/gtn_quick_nav_button"
-                    android:nextFocusLeft="@+id/gtn_quick_nav_button"/>
+                    android:nextFocusLeft="@+id/gtn_quick_nav_button"
+                    android:textDirection="anyRtl"
+                    android:gravity="start|center_vertical"
+                    android:textAlignment="gravity"/>
 
                 <ImageButton
                     android:layout_width="32dp"
@@ -89,8 +92,8 @@
                 android:id="@+id/gtn_quick_nav_spacer" />
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:id="@+id/gtn_quick_nav_button"
                 android:contentDescription="@string/gtn_quick_nav_button_description"
                 android:background="@android:color/transparent"

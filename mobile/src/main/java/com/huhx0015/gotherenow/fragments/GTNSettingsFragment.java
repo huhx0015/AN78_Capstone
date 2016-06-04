@@ -140,11 +140,25 @@ public class GTNSettingsFragment extends Fragment {
             }
         });
 
+        drivingButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                setTransType(0);
+            }
+        });
+
         // TRANSIT Button:
         transitButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                setTransType(1);
+            }
+        });
+
+        transitButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
                 setTransType(1);
             }
         });
@@ -158,11 +172,25 @@ public class GTNSettingsFragment extends Fragment {
             }
         });
 
+        bikingButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                setTransType(2);
+            }
+        });
+
         // WALKING Button:
         walkingButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                setTransType(3);
+            }
+        });
+
+        walkingButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
                 setTransType(3);
             }
         });

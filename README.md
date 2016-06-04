@@ -9,6 +9,8 @@ Android Nanodegree | Project 7-8: Capstone: Go There Now is an Android applicati
 
 Go There Now was developed in part as the final "Capstone" project for the Android Nanodegree program. This project serves to demonstrate all skills learned throughout the program to design, plan, and build an Android application from scratch.
 
+As this application relies on Google Maps and Google Play Services, Google Maps and Google Play Services need to be installed for Go There Now to work correctly.
+
 #  Rubric
 
 ## Required Components

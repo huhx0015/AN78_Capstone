@@ -36,7 +36,10 @@
             android:nextFocusUp="@+id/delete_button"
             android:nextFocusDown="@+id/gtn_address_input"
             android:nextFocusRight="@+id/gtn_address_input"
-            android:nextFocusLeft="@+id/delete_button"/>
+            android:nextFocusLeft="@+id/delete_button"
+            android:textDirection="anyRtl"
+            android:gravity="start|center_vertical"
+            android:textAlignment="gravity"/>
 
         <EditText
             android:layout_width="fill_parent"
@@ -57,7 +60,10 @@
             android:nextFocusUp="@+id/gtn_shortcut_input"
             android:nextFocusDown="@+id/gtn_action_type_driving_button"
             android:nextFocusRight="@+id/gtn_action_type_driving_button"
-            android:nextFocusLeft="@+id/gtn_shortcut_input"/>
+            android:nextFocusLeft="@+id/gtn_shortcut_input"
+            android:textDirection="anyRtl"
+            android:gravity="start|center_vertical"
+            android:textAlignment="gravity"/>
 
     </LinearLayout>
 
@@ -197,7 +203,9 @@
                             android:textSize="13sp"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
-                            android:gravity="center_vertical"
+                            android:paddingEnd="20dp"
+                            android:paddingRight="20dp"
+                            android:gravity="center_vertical|start"
                             android:nextFocusForward="@+id/create_shortcut_button"
                             android:nextFocusUp="@+id/gtn_action_type_driving_button"
                             android:nextFocusDown="@+id/create_shortcut_button"
@@ -226,6 +234,8 @@
                             android:gravity="center_vertical|start"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingRight="20dp"
                             android:textStyle="bold"
                             android:textSize="13sp"
                             android:nextFocusForward="@+id/save_location_button"
@@ -260,9 +270,11 @@
                             android:textColor="@color/gtn_google_now_color"
                             android:clickable="true"
                             android:typeface="sans"
-                            android:gravity="center_vertical|start"
+                            android:gravity="center_vertical"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingRight="20dp"
                             android:textStyle="bold"
                             android:textSize="13sp"
                             style="@style/GoogleNowCardStyle"
@@ -293,6 +305,8 @@
                             android:textSize="13sp"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingRight="20dp"
                             android:typeface="sans"
                             android:textStyle="bold"
                             android:nextFocusForward="@+id/gtn_shortcut_input"

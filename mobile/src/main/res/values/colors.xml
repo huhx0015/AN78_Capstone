@@ -9,4 +9,5 @@
     <color name="gtn_orange_color">#ff6c00</color>
     <color name="gtn_green_color">#22a301</color>
     <color name="gtn_teal_color">#009688</color>
+    <color name="gtn_black_transparent_color">#40FFFFFF</color>
 </resources>

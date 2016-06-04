@@ -3,6 +3,7 @@ package com.huhx0015.gotherenow.ui.adapters;
 import android.app.Activity;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -90,7 +91,7 @@ public class GTNRecyclerAdapter extends RecyclerView.Adapter<GTNRecyclerAdapter.
     // onBindViewHolder(): Overrides the onBindViewHolder to specify the contents of each item of
     // the RecyclerView. This method is similar to the getView method of a ListView's adapter.
     @Override
-    public void onBindViewHolder(GTNRecyclerViewHolder holder, int position) {
+    public void onBindViewHolder(final GTNRecyclerViewHolder holder, int position) {
 
         // Moves the cursor to the item position.
         final int holderPosition = position;

@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +63,7 @@ public class GTNActionFragment extends Fragment {
 
     // SYSTEM VARIABLES
     private Activity currentActivity; // Used to attach activity to this fragment.
+    private boolean isRTL = false; // Used to determine if device is in RTL mode.
     private SharedPreferences GTN_temps; // Temporary SharedPreferences objects that store settings for the application.
     private static final String GTN_OPTIONS = "gtn_options"; // Used to reference the name of the preference XML file.
     private static final String GTN_TEMPS = "gtn_temps"; // Used to reference the name of the temporary preference XML file.
@@ -173,6 +175,8 @@ public class GTNActionFragment extends Fragment {
     // setUpLayout(): Sets up the layout for the fragment.
     private void setUpLayout() {
 
+        isRTL = GTNLanguage.isRTL(currentActivity); // Determines if device is in RTL mode.
+
         // Calculates the size based on the device's screen density.
         int size = GTNImages.densityToPixels(36, currentActivity);
 
@@ -230,6 +234,9 @@ public class GTNActionFragment extends Fragment {
             setShortcutType(currentShortcutType);
         }
 
+        shortcutInput.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
+        addressInput.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
+
         setUpLanguage(); // Sets up the language text for the fragment.
         setUpButtons(); // Sets up the button listeners for the fragment.
     }
@@ -251,11 +258,25 @@ public class GTNActionFragment extends Fragment {
             }
         });
 
+        drivingButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                setShortcutType(0);
+            }
+        });
+
         // TRANSIT Button:
         transitButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                setShortcutType(1);
+            }
+        });
+
+        transitButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
                 setShortcutType(1);
             }
         });
@@ -269,6 +290,13 @@ public class GTNActionFragment extends Fragment {
             }
         });
 
+        bikingButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                setShortcutType(2);
+            }
+        });
+
         // WALKING Button:
         walkingButton.setOnClickListener(new View.OnClickListener() {
 
@@ -278,9 +306,17 @@ public class GTNActionFragment extends Fragment {
             }
         });
 
+        walkingButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                setShortcutType(3);
+            }
+        });
+
         // ACTION BUTTONS:
         // -----------------------------------------------------------------------------------------
         // CREATE SHORTCUT Button:
+        createShortcutButton.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
         createShortcutButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -324,6 +360,7 @@ public class GTNActionFragment extends Fragment {
         });
 
         // START NAVIGATION Button:
+        navigationButton.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
         navigationButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -348,6 +385,7 @@ public class GTNActionFragment extends Fragment {
         });
 
         // SAVE LOCATION Button:
+        saveLocationButton.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
         saveLocationButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -421,6 +459,7 @@ public class GTNActionFragment extends Fragment {
         });
 
         // DELETE SHORTCUT Button:
+        deleteButton.setGravity(isRTL ? Gravity.CENTER_VERTICAL | Gravity.END : Gravity.CENTER_VERTICAL | Gravity.START);
         deleteButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
