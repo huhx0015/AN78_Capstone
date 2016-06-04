@@ -331,7 +331,7 @@ public class GTNShortcutsFragment extends Fragment implements LoaderManager.Load
                         location.getLongitude() + 1.0));
 
         // Register a listener that receives callbacks when a suggestion has been selected.
-        if (autocompleteClickListener != null) {
+        if (quickNavAddress != null) {
             quickNavAddress.setOnItemClickListener(autocompleteClickListener);
 
             // Set up the adapter that will retrieve suggestions from the Places Geo Data API that cover
