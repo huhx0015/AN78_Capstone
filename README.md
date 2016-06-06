@@ -1,7 +1,7 @@
 AN78_Capstone
 =============
 
-DEVELOPER: Michael Yoon Huh
+DEVELOPER: huhx0015
 
 # Description
 
