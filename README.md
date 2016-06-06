@@ -3,15 +3,19 @@ AN78_Capstone
 
 DEVELOPER: huhx0015
 
+### GO THERE NOW
+![an78_preview](https://cloud.githubusercontent.com/assets/1645482/15801503/0455d64e-2a4c-11e6-84e9-c87ca50b1f72.gif)
+
 # Description
 
 Android Nanodegree | Project 7-8: Capstone: Go There Now is an Android application that manages favorite location shortcuts, with the ability to create customized homescreen shortcut that launches Google Maps in navigation mode. The shortcut bypasses many steps of having to manually set and start Google Navigation mode.
 
-Go There Now was developed in part as the final "Capstone" project for the Android Nanodegree program. This project serves to demonstrate all skills learned throughout the program to design, plan, and build an Android application from scratch.
+Go There Now was developed in part as the final "Capstone" project for the Android Nanodegree program. This project serves to demonstrate all skills learned throughout the program to design, plan, and build an Android application from scratch. Go There Now makes use of the Google Places API and utilizes two Google Play Services, Ads and Location. Go There Now stores and accesses location shortcuts via a ContentProvider and a MySQL Lite database. 
 
 As this application relies on Google Maps and Google Play Services, Google Maps and Google Play Services need to be installed for Go There Now to work correctly.
 
 #  Rubric
+Link: https://review.udacity.com/?_ga=1.96847642.442269068.1457085533#!/projects/4307513821/rubric
 
 ## Required Components
 
