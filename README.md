@@ -35,11 +35,9 @@ Link: https://review.udacity.com/?_ga=1.96847642.442269068.1457085533#!/projects
 - [x] If Location is used, the app customizes the user’s experience by using the device's location.
 - [x] If Admob is used, the app displays test ads. If Admob was not used, student meets specifications.
 
-~~- [] If Analytics is used, the app creates only one analytics instance. If Analytics was not used, student meets specifications.~~
-
-~~- [] If Maps is used, the map provides relevant information to the user. If Maps was not used, student meets specifications.~~
-
-~~- [] If Identity is used, the user’s identity influences some portion of the app. If Identity was not used, student meets specifications.~~
+~~[] If Analytics is used, the app creates only one analytics instance. If Analytics was not used, student meets specifications.~~
+~~[] If Maps is used, the map provides relevant information to the user. If Maps was not used, student meets specifications.~~
+~~[] If Identity is used, the user’s identity influences some portion of the app. If Identity was not used, student meets specifications.~~
 
 ### Material Design
 - [x] App theme extends AppCompat.
@@ -57,11 +55,11 @@ Link: https://review.udacity.com/?_ga=1.96847642.442269068.1457085533#!/projects
 - [x] App uses a Loader to move its data to its views.
 - [x] Must implement at least one of the three
     
-    ~~- [] If it regularly pulls or sends data to/from a web service or API, app updates data in its cache at regular intervals using a SyncAdapter.~~
+    ~~[] If it regularly pulls or sends data to/from a web service or API, app updates data in its cache at regular intervals using a SyncAdapter.~~
     
      OR
     
-    ~~- [] If it needs to pull or send data to/from a web service or API only once, or on a per request basis (such as a search application), app uses an IntentService to do so.~~
+    ~~[] If it needs to pull or send data to/from a web service or API only once, or on a per request basis (such as a search application), app uses an IntentService to do so.~~
     
      OR
     
