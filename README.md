@@ -36,7 +36,9 @@ Link: https://review.udacity.com/?_ga=1.96847642.442269068.1457085533#!/projects
 - [x] If Admob is used, the app displays test ads. If Admob was not used, student meets specifications.
 
 ~~[] If Analytics is used, the app creates only one analytics instance. If Analytics was not used, student meets specifications.~~
+
 ~~[] If Maps is used, the map provides relevant information to the user. If Maps was not used, student meets specifications.~~
+
 ~~[] If Identity is used, the user’s identity influences some portion of the app. If Identity was not used, student meets specifications.~~
 
 ### Material Design
